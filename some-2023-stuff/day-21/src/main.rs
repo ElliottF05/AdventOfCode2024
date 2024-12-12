@@ -244,7 +244,7 @@ fn part2(input: &str, steps: i32) -> i64 {
 
 
 fn part2_2(input: &str, steps: i32) -> i32 {
-
+    // THIS IS A BRUTE-FORCE SOLUTION USED TO TEST UP TO STEPS ~= 5000
     let grid: Vec<Vec<u8>> = input
         .lines()
         .map(|line| line.as_bytes().to_vec())
