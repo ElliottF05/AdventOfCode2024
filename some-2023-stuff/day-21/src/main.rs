@@ -3,10 +3,12 @@ use std::{collections::{HashSet, VecDeque}, f32::consts::E, hash::Hash, i32::MAX
 const STEPS: i32 = 26501365;
 
 // KEY ASSUMPTIONS:
-// Pattern is a square with odd side length and with sidelength//2 being even
-// S occurs at the exact center of the grid
-// There is an unobstructed path from S in all 4 cardinal directions
-// The outer edge of the pattern has no obstacles
+// 1) Pattern is a square with odd side length and with sidelength//2 being odd
+// 2) S occurs at the exact center of the grid
+// 3) There is an unobstructed path from S in all 4 cardinal directions
+// 4) The outer edge of the pattern has no obstacles
+
+// Assumptions 2,3,4 are the key ones, assumption 1 can be pretty easily accomodated for if not true
 
 fn main() {
     let input = include_str!("input.txt");
